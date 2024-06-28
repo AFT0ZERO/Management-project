@@ -1,0 +1,74 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "active":false,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "password123",
+        "projects": [
+          {
+            "id": 1,
+            "title": "Project Alpha",
+            "description": "This is the first project.",
+            "tasks": [
+              {
+                "id": 1,
+                "title": "Task 1",
+                "description": "Task 1 description",
+                "dueDate": "2024-07-10",
+                "status": "in progress"
+              },
+              {
+                "id": 2,
+                "title": "Task 2",
+                "description": "Task 2 description",
+                "dueDate": "2024-07-15",
+                "status": "completed"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Project Beta",
+            "description": "This is the second project.",
+            "tasks": [
+              {
+                "id": 3,
+                "title": "Task 3",
+                "description": "Task 3 description",
+                "dueDate": "2024-07-20",
+                "status": "not started"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "active":false,
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "password": "password456",
+        "projects": [
+          {
+            "id": 3,
+            "title": "Project Gamma",
+            "description": "This is the third project.",
+            "tasks": [
+              {
+                "id": 4,
+                "title": "Task 4",
+                "description": "Task 4 description",
+                "dueDate": "2024-07-25",
+                "status": "in progress"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
