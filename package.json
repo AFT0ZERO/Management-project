@@ -1,9 +1,9 @@
 {
-  "name": "team-5-pro",
+  "name": "team-mangment-app",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
-    "server":"json-server -w db.json",
+    "server":"json-server -w test.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
