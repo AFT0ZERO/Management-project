@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Board</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    
-    <script src="script.js"></script>
-</body>
-</html>
 
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="profile">
+                <span>Designer</span>
+            </div>
+            <nav class="nav">
+                <a href="#">projects1</a>
+                <a href="#">projects2</a>
+                <a href="#">projects3</a>
+                <a href="#">projects4</a>
+                <a href="#">projects5</a>
+            </nav>
+        </div>
+        <main class="main-content">
+            <header class="header">
+                <h1>Task Boards</h1>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Tasks">
+                    <button class="add-btn"><i class="fas fa-plus"></i></button>
+                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                </div>
+            </header>
+            <nav class="status-nav">
+                <span class="status-item">To Do Tasks <span class="status-count">3</span></span>
+                <span class="status-item">In Process <span class="status-count1">2</span></span>
+                <span class="status-item">Done <span class="status-count2">5</span></span>
+            </nav>
+            <section class="tasks">
+                <div class="task-card">
+                    Task 1
+                    <p>روح حل</p>
+                </div>
+                <div class="task-card">Task 2</div>
+                <div class="task-card">Task 3</div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
