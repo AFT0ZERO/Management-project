@@ -1,9 +1,9 @@
 {
-  "name": "team-5-pro",
+  "name": "add-assign-button-to-let-the-users-can-assign-tasks-to-specific-projects-java-script",
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "server":"json-server -w db.json",
+    "serve": "json-server -w db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

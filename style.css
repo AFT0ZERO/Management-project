@@ -1,264 +1,111 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: ;
-    /*--------------------------------------------------------------*/
-    background-size: cover;
-    background-repeat: no-repeat;
-
 }
 
-header {
-    width: 100%;
-    background-color: #A0BFE0;
-    padding: 1em 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header>h1 {
-    margin-left: 50px;
-    color: #4A55A2;
-}
-
-nav {
-    margin-right: 50px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #4A55A2;
-    font-weight: bold;
-    position: relative;
-}
-
-nav ul li a:hover {
-    color: #4A55A2;
-    text-shadow: 0 0 10px #4A55A2;
-}
-
-nav ul li a:after {
-    content: '';
-    bottom: -25px;
-    height: 0px;
-    width: 10px;
-    left: 50%;
-    position: absolute;
-    background-color: #4A55A2;
-    border-radius: 50%;
-    transition: all 300ms;
-}
-
-nav ul li a.active {
-    color: #4A55A2;
-    text-shadow: 0 0 10px #4A55A2;
-    text-decoration: underline;
-}
-
-
-.intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-    text-align: left;
-    padding: 2em;
-    align-items: center;
-}
-
-.intro h1 {
-    font-size: 2.5em;
-    margin: 0.5em 0;
-}
-
-.intro .description {
-    font-size: 1em;
-    color: #7a7a7a;
-    margin: 1em 0;
-}
-
-.login-button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    background-color: #4A55A2;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.illustration {
-    text-align: right;
-    display: flex;
-    justify-content: center;
-}
-
-.illustration img {
-    width: 500px;
-    max-width: 100%;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    max-width: 75%;
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    color: white;
     padding: 20px;
-    margin: 10px;
+    height: 100vh;
+    position: fixed;
 }
 
-.post1 {
-    border: black solid;
-    max-width: 300px;
-}
-
-.text-content>h1 {
-    color: #4A55A2;
-    margin-bottom: 20px;
-}
-
-.description {
-    color: #7895CB;
-}
-
-.title {
+.sidebar h2 {
     text-align: center;
-    margin-bottom: 50px;
-    color: #4A55A2;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-card {
+    margin-top: 10px;
+}
+
+.add-card input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.add-card button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.add-card button:hover {
+    background-color: #34495e;
 }
 
 .content {
     display: flex;
-    justify-content: space-around;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.card-tasks {
-    padding: 15px;
-    width: 15rem;
-    background-color: #C5DFF8;
-    border-radius: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .card {
-    width: 18rem;
-    background-color: #A0BFE0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    max-width: 400px;
-    margin: 20px;
-    border-radius: 20px;
-}
-.card-title {
-    color: #4A55A2;
-}
-.card-tasks-title{
-    color: #4A55A2;
-}
-.card-text{
-    color: #344b75;
-}
-.card-tasks-text {
-    color: #344b75;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
 }
 
-.tasks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card h3 {
+    margin-top: 0;
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        padding: 1em 0;
-        border-top: 1px solid #eaeaea;
-    }
-
-    nav ul li a {
-        width: 100%;
-        display: block;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px;
-        background-color: #4A55A2;
-        transition: 0.3s;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .intro {
-        grid-template-columns: 1fr;
-    }
-
-    .intro>.text-content {
-        order: 2;
-    }
-
-    .intro>.illustration {
-        order: 1;
-    }
+.ptn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
 }
