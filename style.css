@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 * {
     box-sizing: border-box;
@@ -12,14 +11,13 @@ body {
     height: 100vh;
     margin: -20px 0 50px;
 }
+
 h1 {
     font-weight: bold;
     margin: 0;
-
 }
 h2 {
     text-align: center;
-    
 }
 p {
     font-size: 14px;
@@ -28,6 +26,20 @@ p {
     letter-spacing: 0.5px;
     margin: 20px 0 30px;
 }
+/* .signup-image {
+
+    margin-top: 20px;
+    width: 50px; 
+    height: auto; 
+} */
+/* .signup-image, .signin-image {
+    margin-top: 20px;
+    max-width: 80%;
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
 span {
     font-size: 12px;
 }
@@ -40,7 +52,7 @@ a {
 button {
     border-radius: 20px;
     border: 1px solid #4A55A2;
-    background-color:#4A55A2 ;
+    background-color: #4A55A2;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -55,7 +67,7 @@ button:active {
 button:focus {
     outline: none;
 }
-button.ghost {
+button.ht {
     background-color: transparent;
     border-color: #ffffff;
 }
@@ -71,7 +83,7 @@ form {
 }
 input {
     background-color: #eee;
-    border: none;
+    border-radius: 32px;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
@@ -139,7 +151,7 @@ input {
 }
 .overlay {
     background: #4A55A2;
-    background: -webkit-linear-gradient(to right,#4A55A2, #4A55A2);
+    background: -webkit-linear-gradient(to right, #4A55A2, #4A55A2);
     background: linear-gradient(to right, #4A55A2, #4A55A2);
     background-repeat: no-repeat;
     background-size: cover;
@@ -194,4 +206,53 @@ input {
     margin: 0 5px;
     height: 40px;
     width: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        min-height: 600px;
+    }
+
+    .form-container {
+        width: 100%;
+        left: 0;
+    }
+
+    .sign-in-container {
+        transform: translateX(0);
+    }
+
+    .container.right-panel-active .sign-in-container {
+        transform: translateX(100%);
+    }
+
+    .sign-up-container {
+        opacity: 1;
+        z-index: 5;
+        transform: translateX(100%);
+    }
+
+    .container.right-panel-active .sign-up-container {
+        transform: translateX(0);
+    }
+
+    .overlay-container {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 0 20px;
+    }
+
+    input {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 30px;
+    }
 }
