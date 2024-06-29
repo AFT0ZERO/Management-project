@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dash-board.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+</head>
+<body>
+<div class="MainCard">
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2 class="taitle">Task Taitle</h2>
+            <h2 class="history">30/6/2024</h2>
+        </div>
+        
+        <p class="description">
+            These are the details of the task. This section contains a brief
+            description of what the task is about.
+        </p>
+        <hr>
+            <label for="status">Status : </label>
+            <select name="status" id="status">
+                <option class="todo" value="todo">To Do</option>
+                <option class="inprogress" value="inprogress">In Progress</option>
+                <option class="completed" value="completed">Completed</option>
+            </select>
+        <button class="delete">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        <button class="edit">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2 class="taitle">Task Taitle</h2>
+            <h2 class="history">30/6/2024</h2>
+        </div>
+        <p class="description">
+        These are the details of the task. This section contains a brief
+        description of what the task is about.
+        </p>
+        <hr>
+
+            <label for="status">Status : </label>
+            <select name="status" id="status">
+            <option class="todo" value="todo">To Do</option>
+            <option class="inprogress" value="inprogress">In Progress</option>
+            <option class="completed" value="completed">Completed</option>
+        </select>
+        <button class="delete">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        <button class="edit">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2 class="taitle">Task Taitle</h2>
+            <h2 class="history">30/6/2024</h2>
+        </div>
+        <p class="description">
+        These are the details of the task. This section contains a brief
+        description of what the task is about.
+        </p>
+        <hr>
+
+        <label for="status">Status : </label>
+        <select name="status" id="status">
+            <option class="todo" value="todo">To Do</option>
+            <option class="inprogress" value="inprogress">In Progress</option>
+            <option class="completed" value="completed">Completed</option>
+        </select>
+        <button class="delete">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        <button class="edit">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2 class="taitle">Task Taitle</h2>
+            <h2 class="history">30/6/2024</h2>
+        </div>
+        <p class="description">
+        These are the details of the task. This section contains a brief
+        description of what the task is about.
+        </p>
+        <hr>
+
+        <label for="status">Status : </label>
+        <select name="status" id="status">
+            <option class="todo" value="todo">To Do</option>
+            <option class="inprogress" value="inprogress">In Progress</option>
+            <option class="completed" value="completed">Completed</option>
+        </select>
+        <button class="delete">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        <button class="edit">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2 class="taitle">Task Taitle</h2>
+            <h2 class="history">30/6/2024</h2>
+        </div>
+        <p class="description">
+        These are the details of the task. This section contains a brief
+        description of what the task is about.
+        </p>
+        <hr>
+
+        <label for="status">Status : </label>
+        <select name="status" id="status">
+            <option class="todo" value="todo">To Do</option>
+            <option class="inprogress" value="inprogress">In Progress</option>
+            <option class="completed" value="completed">Completed</option>
+        </select>
+        <button class="delete">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        <button class="edit">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+    </div>
+
+
+
+</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const selectElements = document.querySelectorAll("select");
+
+        selectElements.forEach((selectElement) => {
+            selectElement.addEventListener("change", () => {
+            const value = selectElement.value;
+            selectElement.className = "status"; 
+            selectElement.classList.add(value); 
+        });
+
+        const initialValue = selectElement.value;
+        selectElement.classList.add(initialValue);
+        });
+    });
+    </script>
+</body>
+</html>
