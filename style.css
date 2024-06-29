@@ -6,8 +6,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(./imgs/blue-frame-line-business-professional-square-shape-powerpoint-background_d7e9c18c12__960_540.avif);
+    background-color: ;
+    /*--------------------------------------------------------------*/
     background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
@@ -15,19 +17,21 @@ header {
     width: 100%;
     background-color: #A0BFE0;
     padding: 1em 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 header>h1 {
     margin-left: 50px;
-    color: #4A55A2
-    ;
+    color: #4A55A2;
 }
+
 nav {
     margin-right: 50px;
 }
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -133,13 +137,61 @@ main {
     max-width: 300px;
 }
 
-.text-content>h1  {
+.text-content>h1 {
     color: #4A55A2;
     margin-bottom: 20px;
 }
 
 .description {
     color: #7895CB;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-tasks {
+    padding: 15px;
+    width: 15rem;
+    background-color: #C5DFF8;
+    border-radius: 20px;
+}
+
+.card {
+    width: 18rem;
+    background-color: #A0BFE0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.card-title {
+    color: #4A55A2;
+}
+.card-tasks-title{
+    color: #4A55A2;
+}
+.card-text{
+    color: #344b75;
+}
+.card-tasks-text {
+    color: #344b75;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Responsive styles */
@@ -153,7 +205,7 @@ main {
         flex-direction: column;
         width: 100%;
         background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         position: absolute;
         top: 60px;
         left: 0;
@@ -200,10 +252,12 @@ main {
     .intro {
         grid-template-columns: 1fr;
     }
-    .intro>.text-content{
+
+    .intro>.text-content {
         order: 2;
     }
-    .intro>.illustration{
+
+    .intro>.illustration {
         order: 1;
     }
 }
