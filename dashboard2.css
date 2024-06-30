@@ -1,0 +1,110 @@
+
+
+.MainCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #7895CB;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    box-shadow: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.taitle {
+    margin: 0;
+    font-size: 24px;
+}
+
+.history {
+    margin-left: 10px; 
+}
+
+.description {
+    font-size: 16px;
+}
+
+.status label {
+    font-size: 20px;
+}
+
+.task-status {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.todo {
+    background-color: rgb(212, 82, 82);
+}
+
+.inprogress {
+    background-color: rgb(255, 186, 58);
+}
+
+.completed {
+    background-color: rgb(131, 218, 105);
+}
+
+#status {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.edit {
+    background-color: #C5DFF8;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.delete {
+    background-color: #C5DFF8;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.ok {
+    padding: 10px;
+    margin: 20px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .taitle {
+        font-size: 20px;
+    }
+
+    .task-status, .Modifications {
+        font-size: 14px;
+    }
+
+    .okButton {
+        width: 70px;
+    }
+} 
+
