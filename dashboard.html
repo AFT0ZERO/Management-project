@@ -11,13 +11,14 @@
 </head>
 
 <body>
+    
     <div class="dashboard">
         <div class="sidebar">
             <div class="profile">
-                <span>Designer</span>
+                <span>Dashboard</span>
             </div>
-            <nav class="nav">
-                <div class="nav-item">
+            <aside class="nav" id="projectList">
+                <!-- <div class="nav-item" >
                     <a href="#">Projects 1</a>
                     <button class="delete-btn"><i class="fas fa-trash"></i></button>
                 </div>
@@ -32,19 +33,35 @@
                 <div class="nav-item">
                     <a href="#">Projects 4</a>
                     <button class="delete-btn"><i class="fas fa-trash"></i></button>
-                </div>
-                <div class="nav-item">
-                    <a href="#">Projects 5</a>
-                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
-                </div>
-            </nav>
+                </div> -->
+            </aside>
         </div>
         <main class="main-content">
             <header class="header">
-                <h1>Task Boards</h1>
+                <div>
+                    <h1>Task Boards</h1>
+                </div>
+                
                 <div class="search-container">
                     <input type="text" placeholder="Search Tasks">
                     <button class="add-btn"><i class="fas fa-plus"></i></button>
+                    <button id="openFormButton">Create Task</button>
+                  
+                    <!-- here  pop up task edit -->
+                    <div id="taskFormPopup" class="popup">
+                        <form id="taskForm" class="form-container">
+                            <h2>Create Task</h2>
+                            <label for="title-add-projet"><b>Title</b></label>
+                            <input type="text" placeholder="Enter Title" name="title" id="title-add-projet" required>
+                            
+                            <label for="des-add-projet"><b>Description</b></label>
+                            <textarea placeholder="Enter Description" name="description" id="des-add-projet"></textarea>
+                            
+                            <button type="submit" id="btnSubmit">Create</button>
+                            <button type="button" class="btn cancel" id="closeFormButton">Close</button>
+                        </form>
+                    </div>
+                    <!-- here -->
 
                 </div>
             </header>
@@ -53,11 +70,11 @@
                 <span class="status-item">In Process <span class="status-count1">2</span></span>
                 <span class="status-item">Done <span class="status-count2">5</span></span>
             </nav>
-            <section class="tasks">
-                <div class="MainCard">
+            <section class="tasks" id="contaner">
+                <div class="MainCard"> <!-- check this if delete what will do -->
 
 
-                    <div class="card">
+                    <!-- <div class="card">
                         <div class="card-header">
                             <h2 class="taitle">Task Taitle</h2>
                             <h2 class="history">30/6/2024</h2>
@@ -191,7 +208,7 @@
                     </div>
                 
                 
-                
+                 -->
                 </div>
                 <!-- <div class="task-card">
                     Task 1

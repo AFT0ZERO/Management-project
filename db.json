@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "active": false,
+      "active": true,
       "firstName": "John",
       "lastName": "Doe",
       "email": "john.doe@example.com",
@@ -110,10 +110,23 @@
     },
     {
       "id": "7fd6",
-      "active": true,
+      "active": false,
       "firstName": "abdallah",
       "lastName": "tamimi",
       "email": "2@2",
+      "password": "1234",
+      "projects": [
+        {
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "77b5",
+      "active": false,
+      "firstName": "1",
+      "lastName": "1",
+      "email": "3@3",
       "password": "1234",
       "projects": [
         {

@@ -6,19 +6,26 @@ body {
 
 .dashboard {
     display: flex;
-    height: 100vh;
+    min-height: 700px;
+    height: 100%;
+  
 }
 
 .sidebar {
-    width: 250px;
+    max-width: 250px;
     background-color: #4A55A2;
     color: #fff;
     padding: 20px;
 }
 
-.sidebar .profile {
+ .profile {
     text-align: center;
     margin-bottom: 20px;
+}
+.profile span
+{
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .nav-item {
@@ -156,3 +163,61 @@ body {
 .task-card:hover {
     transform: scale(1.1);
 }
+
+/* button to add task start abdallah  */
+button {
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.popup {
+    width: 400px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    background-color: white;
+    padding: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #54c058;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn.cancel {
+    background-color: red;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+/* button to add task start abdallah  */

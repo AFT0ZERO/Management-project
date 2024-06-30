@@ -16,16 +16,21 @@
     <header>
         <p>TaskFlow</p>
         <nav>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="nav-list">
-                <li><a href="index.html" id="Home">Home</a></li>
-                <li><a href="#" id="Dashboard">Dashboard</a></li>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#Testimonials">Testimonials</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+          
             </ul>
-        </nav>
+            <ul>
+              <li class="hideOnMobile"><a href="index.html">Home</a></li>
+              <li class="hideOnMobile"><a href="#Testimonials">Testimonials</a></li>
+              <li class="hideOnMobile"><a href="dashboard.html">Dashboard</a></li>
+              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+          </nav>
+
     </header>
     <main>
         <div class="intro">
@@ -40,68 +45,44 @@
             </figure>
         </div>
 
-        <section class="cards" id="SKILLS">
-
-            <h2 class="title">Projects</h2>
-
-            <div class="content">
-
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                        <div class="tasks">
-                            <div class="card-tasks">
-                                <h5 class="card-tasks-title">task title treatment</h5>
-                                <p class="card-tasks-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                            </div>
-                        </div>
-
+        <section  id="Testimonials">
+            <h2 class="title">Testimonials</h2>
+            <div class="cards">
+                <div class="card-one">
+                    <div class="card-user-info">
+                      <img src="imgs/image-colton.jpg" alt="user photo" class="user-img">
+                      <p class="card-user-name">Colton Smith <br><span>Project Manager</span></p>
                     </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                       
-                        <div class="tasks">
-                            <div class="card-tasks">
-                                <h5 class="card-tasks-title">task title treatment</h5>
-                                <p class="card-tasks-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                            </div>
-                        </div>
-
+                    <p class="card-content">"This management app has significantly improved my team's productivity. The intuitive interface and robust features make task tracking and collaboration seamless. Highly recommended!"</p>
+                  </div>
+                  <div class="card-one">
+                    <div class="card-user-info">
+                      <img src="imgs/image-anne.jpg" alt="user photo" class="user-img">
+                      <p class="card-user-name">Anne Wallace <br><span>Team Lead</span></p>
                     </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                       
-                        <div class="tasks">
-                            <div class="card-tasks">
-                                <h5 class="card-tasks-title">task title treatment</h5>
-                                <p class="card-tasks-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                            </div>
-                        </div>
-
+                    <p class="card-content">"The app is a game-changer for our workflow. Tasks are organized, deadlines are clear, and communication is much easier. It's become an essential tool for our team."</p>
+                  </div>
+                  <div class="card-one">
+                    <div class="card-user-info">
+                      <img src="imgs/image-irene.jpg" alt="user photo" class="user-img">
+                      <p class="card-user-name">Irene Roberts <br><span>Freelancer</span></p>
                     </div>
-                </div> -->
-
+                    <p class="card-content">"As a freelancer, this app helps me keep track of multiple projects effortlessly. The ability to set priorities and deadlines keeps me on track and efficient."</p>
+                  </div>
+          
             </div>
+            
+            <!-- <div class="content"> 
+            </div> -->
 
         </section>
-
+        
     </main>
+    <footer>
+            <p>&copy; 2024 Team 5. All rights reserved.</p>
+        </div>
+    </footer>
+    
 
     <script src="script.js"></script>
 </body>
