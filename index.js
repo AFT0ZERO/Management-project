@@ -1,55 +1,5 @@
 //Display an overview of the user's projects and tasks once logged in.
-// Each project should have a title and description.
-// async function getJson() {
-//     try {
-//         const response = await fetch('http://localhost:3000/users');
-//         const data = await response.json();
-
-//         data.forEach(user => {
-//             if (user.active == true) {
-//                 user.projects.forEach(project => {
-//                     const Container = document.getElementById('insert');
-//                     const divcontaner = document.createElement('div');
-//                     const maintaskcontaner =document.getElementById("tasks")
-//                     const taskcontaner = document.createElement('div')
-//                     divcontaner.className = "project-title-description";
-//                     taskcontaner.className = "user-tasks"
-//                     taskcontaner.innerHTML = `
-//                     <h2>${project.tasks.title}</h2>
-//                     <p>${project.tasks.description} <br/>
-//                     ${project.tasks.dueDate}<br/>
-//                     ${project.tasks.status}</p>
-//                     `;
-//                     divcontaner.innerHTML = `
-//                     <h1>${project.title}</h1>
-//                     <p>${project.description}</p>
-//                     `;
-//                     Container.appendChild(divcontaner);
-//                     divcontaner.appendChild(taskcontaner);
-//                     taskcontaner.appendChild(maintaskcontaner);
-//                 });
-//             }
-//         });
-//     } catch (error) {
-//         console.error('Error fetching or parsing data:', error);
-//     }
-// }
-// getJson();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Each project should have a title and description.                        
 async function getJson() {
     try {
         const response = await fetch('http://localhost:3000/users');

@@ -2,7 +2,7 @@
     "users": [
       {
         "id": 1,
-        "active":true,
+        "active":false,
         "firstName": "John",
         "lastName": "Doe",
         "email": "john.doe@example.com",
@@ -47,7 +47,7 @@
       },
       {
         "id": 2,
-        "active":false,
+        "active":true,
         "firstName": "Jane",
         "lastName": "Smith",
         "email": "jane.smith@example.com",
