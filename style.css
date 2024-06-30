@@ -11,7 +11,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #426a8d;
+    background-color: #4A55A2;
     color: #fff;
     padding: 20px;
 }
@@ -21,19 +21,33 @@ body {
     margin-bottom: 20px;
 }
 
-.sidebar .nav {
+.nav-item {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3b4a58;
+    padding: 10px 0;
 }
 
-.sidebar .nav a {
+.nav-item a {
     text-decoration: none;
     color: #fff;
-    padding: 10px 0;
-    border-bottom: 1px solid #3b4a58;
+    padding: 10px;
 }
 
 .nav a:hover {
+    color: #007bff;
+}
+
+
+.nav-item .delete-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-item .delete-btn:hover {
     color: #007bff;
 }
 
@@ -56,13 +70,14 @@ body {
     margin: 0;
 }
 
-.header .add-btn:hover {
+.search-container .add-btn {
+    padding: 5px 10px;
+}
+
+.search-container .add-btn:hover {
     color: #3b4a58;
 }
 
-.header.delete-btn:hover {
-    color: #3b4a58;
-}
 
 .search-container {
     display: flex;
