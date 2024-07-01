@@ -6,6 +6,13 @@ document.getElementById('openFormButton').addEventListener('click', function () 
 document.getElementById('closeFormButton').addEventListener('click', function () {
     document.getElementById('addProjectFormPopup').style.display = 'none';
 });
+document.getElementById('createTaskButton').addEventListener('click', function() {
+    document.getElementById('createTaskPopup').style.display = 'block';
+});
+
+document.getElementById('closeCreateTaskPopup').addEventListener('click', function() {
+    document.getElementById('createTaskPopup').style.display = 'none';
+});
 
 
 
@@ -146,7 +153,7 @@ async function displayProjectDetails(project) {
                             <option class="inprogress" value="inprogress">In Progress</option>
                             <option class="completed" value="completed">Completed</option>
                         </select>
-                        <button id="delete">
+                        <button class="edit" id="delete">
                             <i   class="fa fa-trash" aria-hidden="true"></i>
                         </button>
                         <button class="edit">
@@ -161,8 +168,28 @@ async function displayProjectDetails(project) {
         projectContainer.appendChild(taskContainer);
     });
 }
-// display project end 
+// display project end
+ 
+//add task start
+let submitTask = document.getElementById("createTaskForm");
+submitTask.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
+    let addTaskTitle = document.getElementById("title-add-task");
+    let addTaskDes = document.getElementById("des-add-task");
+
+    const response0 = await fetch('http://localhost:3000/users');
+    const user0 = await response0.json();
+    user0.forEach(async (user) => {
+        if (user.active) 
+        {   
+            const response2 = await fetch('http://localhost:3000/projects/${}');
+            const project = await response2.json();
+
+        }
+        })
+})
+//add task end 
 
 
 //add project start  abdallah

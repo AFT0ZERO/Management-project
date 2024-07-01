@@ -256,4 +256,90 @@ input[type="text"], textarea {
     color: black;
     font-weight: 600;
 }
+#btnSubmit
+{
+  
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #54c058;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+}
+#btnSubmit:hover
+{
+    opacity: 0.9;
+}
+#createTaskButton
+{
+    border-radius: 50%;
+    border: none;
+}
+#createTaskButton:hover
+{
+    background-color: #54c058;
+ 
+}
+.delete-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.delete-btn:hover {
+    color: #007bff;
+}
 /* button to delete projcet end abdallah */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #888;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    background-color: white;
+    padding: 20px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn.close {
+    background-color: red;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}

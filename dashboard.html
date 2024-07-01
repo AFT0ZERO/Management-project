@@ -21,7 +21,7 @@
                 <button id="openFormButton">Create Project</button>
                 <div id="addProjectFormPopup" class="popup">
                     <form id="prjectForm" class="form-container">
-                        <h2>Create Task</h2>
+                        <h2>Create Project</h2>
                         <label for="title-add-projet"><b>Title</b></label>
                         <input type="text" placeholder="Enter Title" name="title" id="title-add-projet" required>
 
@@ -64,22 +64,26 @@
 
                 <div class="search-container">
                     <input type="text" placeholder="Search Tasks">
-                    <button class="add-btn"><i class="fas fa-plus"></i></button>
+                    
+                    <button id="createTaskButton"><i class="fas fa-plus"></i></button>
 
-                    <!-- here  pop up task edit -->
-                    <!-- <div id="taskFormPopup" class="popup">
-                        <form id="taskForm" class="form-container">
+                    <!-- here  pop up task ed   it -->
+                    <!-- <button id="createTaskButton">Create Task</button> -->
+    
+                    <div id="createTaskPopup" class="modal">
+                        <form id="createTaskForm" class="modal-content">
                             <h2>Create Task</h2>
-                            <label for="title-add-projet"><b>Title</b></label>
-                            <input type="text" placeholder="Enter Title" name="title" id="title-add-projet" required>
-
-                            <label for="des-add-projet"><b>Description</b></label>
-                            <textarea placeholder="Enter Description" name="description" id="des-add-projet"></textarea>
-
-                            <button type="submit" id="btnSubmit">Create</button>
-                            <button type="button" class="btn cancel" id="closeFormButton">Close</button>
+                            <label for="taskTitle"><b>Title</b></label>
+                            <input type="text" placeholder="Enter Title" name="taskTitle" id="title-add-task" required>
+                            
+                            <label for="taskDescription"><b>Description</b></label>
+                            <textarea placeholder="Enter Description" name="taskDescription" id="des-add-task" required></textarea>
+                            
+                            <button type="submit" class="btn submit">Create</button>
+                            <button type="button" class="btn close" id="closeCreateTaskPopup">Close</button>
                         </form>
-                    </div> -->
+                    </div>
+                
                     <!-- here -->
 
                 </div>
@@ -93,148 +97,9 @@
                 <div class="MainCard"> <!-- check this if delete what will do -->
 
 
-                    <!-- <div class="card">
-                        <div class="card-header">
-                            <h2 class="taitle">Task Taitle</h2>
-                            <h2 class="history">30/6/2024</h2>
-                        </div>
-                        
-                        <p class="description">
-                            These are the details of the task. This section contains a brief
-                            description of what the task is about.
-                        </p>
-                        <hr>
-                            <label for="status">Status : </label>
-                            <select name="status" id="status">
-                                <option class="todo" value="todo">To Do</option>
-                                <option class="inprogress" value="inprogress">In Progress</option>
-                                <option class="completed" value="completed">Completed</option>
-                            </select>
-                        <button class="delete">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                        <button class="edit">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="taitle">Task Taitle</h2>
-                            <h2 class="history">30/6/2024</h2>
-                        </div>
-                        <p class="description">
-                        These are the details of the task. This section contains a brief
-                        description of what the task is about.
-                        </p>
-                        <hr>
-                
-                            <label for="status">Status : </label>
-                            <select name="status" id="status">
-                            <option class="todo" value="todo">To Do</option>
-                            <option class="inprogress" value="inprogress">In Progress</option>
-                            <option class="completed" value="completed">Completed</option>
-                        </select>
-                        <button class="delete">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                        <button class="edit">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="taitle">Task Taitle</h2>
-                            <h2 class="history">30/6/2024</h2>
-                        </div>
-                        <p class="description">
-                        These are the details of the task. This section contains a brief
-                        description of what the task is about.
-                        </p>
-                        <hr>
-                
-                        <label for="status">Status : </label>
-                        <select name="status" id="status">
-                            <option class="todo" value="todo">To Do</option>
-                            <option class="inprogress" value="inprogress">In Progress</option>
-                            <option class="completed" value="completed">Completed</option>
-                        </select>
-                        <button class="delete">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                        <button class="edit">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="taitle">Task Taitle</h2>
-                            <h2 class="history">30/6/2024</h2>
-                        </div>
-                        <p class="description">
-                        These are the details of the task. This section contains a brief
-                        description of what the task is about.
-                        </p>
-                        <hr>
-                
-                        <label for="status">Status : </label>
-                        <select name="status" id="status">
-                            <option class="todo" value="todo">To Do</option>
-                            <option class="inprogress" value="inprogress">In Progress</option>
-                            <option class="completed" value="completed">Completed</option>
-                        </select>
-                        <button class="delete">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                        <button class="edit">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                
-                
-                
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="taitle">Task Taitle</h2>
-                            <h2 class="history">30/6/2024</h2>
-                        </div>
-                        <p class="description">
-                        These are the details of the task. This section contains a brief
-                        description of what the task is about.
-                        </p>
-                        <hr>
-                
-                        <label for="status">Status : </label>
-                        <select name="status" id="status">
-                            <option class="todo" value="todo">To Do</option>
-                            <option class="inprogress" value="inprogress">In Progress</option>
-                            <option class="completed" value="completed">Done</option>
-                        </select>
-                        <button class="delete">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                        <button class="edit">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                
-                
-                 -->
+                    
                 </div>
-                <!-- <div class="task-card">
-                    Task 1
-                    <p>روح حل</p>
-                </div>
-                <div class="task-card">Task 2</div>
-                <div class="task-card">Task 3</div> -->
+              
             </section>
         </main>
     </div>

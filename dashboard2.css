@@ -67,10 +67,17 @@
 }
 
 .edit {
-    background-color: #C5DFF8;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
     padding: 10px;
     margin: 20px;
     border-radius: 10px;
+    font-size: 15px;
+}
+.edit:hover{
+    color: #007bff;
 }
 
 .delete {
