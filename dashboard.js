@@ -88,10 +88,11 @@ async function getJson() {
                    const projectdelBtn=document.createElement("button");
                     projectdelBtn.classList.add("delete-btn");
                     projectdelBtn.innerHTML=`
-                  <i id=""delete-btn class="fas fa-trash"></i>
+                  <i  class="fas fa-trash" ></i>
                     `;
+                   
                     projectLink.addEventListener('click', () => displayProjectDetails(project));
-                    
+                    projectdelBtn.addEventListener('click', () => deleteProject3(project));
                     projectItem.appendChild(projectLink);
                     projectItem.appendChild(projectdelBtn);
 
@@ -112,14 +113,14 @@ async function displayProjectDetails(project) {
     projectContainer.classList.add("MainCard")
 
     container.appendChild(projectContainer);
-    await fetch(`http://localhost:3000/projects/${project.id}`), 
-    {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify( {active_pro:true})
-    }
+    // await fetch(`http://localhost:3000/projects/${project.id}`), 
+    // {
+    //     method: 'PATCH',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify( {active_pro:true})
+    // }
     console.log(project.id)
     const response2 = await fetch(`http://localhost:3000/tasks?pro_id=${project.id}`);
     const tasks = await response2.json();
@@ -205,6 +206,7 @@ submitProject.addEventListener("submit", async (e) => {
 
 //delete project start abdallah
 let deleteProject = document.getElementById("delete-btn");
+console.log( document.getElementById("delete-btn"))
 deleteProject.addEventListener("click", async (e) => {
     e.preventDefault();
     
@@ -254,3 +256,20 @@ deleteProject.addEventListener("click", async (e) => {
 
 
 
+async function deleteProject3(project) {
+    // let projectId = project.toString();
+    let headersList = {
+        "Accept": "*/*",
+        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+       }
+       
+       let response = await fetch(`http://localhost:3000/projects/${project.id}`, { 
+         method: "DELETE",
+         headers: headersList
+       });
+       
+       let data = await response.text();
+       console.log(data);
+       
+    
+}

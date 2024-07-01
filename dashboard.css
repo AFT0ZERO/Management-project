@@ -41,6 +41,8 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .nav a:hover {

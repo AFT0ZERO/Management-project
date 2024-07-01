@@ -27,13 +27,6 @@
   ],
   "projects": [
     {
-      "id": "47d5",
-      "user_id": "1",
-      "active_pro": false,
-      "title": "Project Gamma",
-      "description": "This is the third project."
-    },
-    {
       "id": "8ce3",
       "user_id": "1",
       "active_pro": false,
@@ -41,25 +34,11 @@
       "description": "This is the second project."
     },
     {
-      "id": "ca4e",
-      "user_id": "1",
-      "active_pro": false,
-      "title": "test",
-      "description": "test"
-    },
-    {
       "id": "eb59",
       "user_id": "1",
       "active_pro": false,
       "title": "22",
       "description": "22"
-    },
-    {
-      "id": "c387",
-      "user_id": "1",
-      "active_pro": false,
-      "title": "1",
-      "description": "1"
     },
     {
       "id": "ace7",
