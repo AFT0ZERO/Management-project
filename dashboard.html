@@ -11,16 +11,36 @@
 </head>
 
 <body>
-    
+
     <div class="dashboard">
         <div class="sidebar">
             <div class="profile">
                 <span>Dashboard</span>
+                <div class="btn-card">
+                    <!-- add projcet start -->
+                <button id="openFormButton">Create Project</button>
+                <div id="addProjectFormPopup" class="popup">
+                    <form id="prjectForm" class="form-container">
+                        <h2>Create Task</h2>
+                        <label for="title-add-projet"><b>Title</b></label>
+                        <input type="text" placeholder="Enter Title" name="title" id="title-add-projet" required>
+
+                        <label for="des-add-projet"><b>Description</b></label>
+                        <textarea placeholder="Enter Description" name="description" id="des-add-projet"></textarea>
+
+                        <button type="submit" id="btnSubmit">Create</button>
+                        <button type="button" class="btn cancel" id="closeFormButton">Close</button>
+                    </form>
+                </div>
+                <!-- add projcet end -->
+
+
+                </div>
             </div>
             <aside class="nav" id="projectList">
                 <!-- <div class="nav-item" >
                     <a href="#">Projects 1</a>
-                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                    <button  class="delete-btn"><i class="fas fa-trash"></i></button>
                 </div>
                 <div class="nav-item">
                     <a href="#">Projects 2</a>
@@ -41,26 +61,25 @@
                 <div>
                     <h1>Task Boards</h1>
                 </div>
-                
+
                 <div class="search-container">
                     <input type="text" placeholder="Search Tasks">
                     <button class="add-btn"><i class="fas fa-plus"></i></button>
-                    <button id="openFormButton">Create Task</button>
-                  
+
                     <!-- here  pop up task edit -->
-                    <div id="taskFormPopup" class="popup">
+                    <!-- <div id="taskFormPopup" class="popup">
                         <form id="taskForm" class="form-container">
                             <h2>Create Task</h2>
                             <label for="title-add-projet"><b>Title</b></label>
                             <input type="text" placeholder="Enter Title" name="title" id="title-add-projet" required>
-                            
+
                             <label for="des-add-projet"><b>Description</b></label>
                             <textarea placeholder="Enter Description" name="description" id="des-add-projet"></textarea>
-                            
+
                             <button type="submit" id="btnSubmit">Create</button>
                             <button type="button" class="btn cancel" id="closeFormButton">Close</button>
                         </form>
-                    </div>
+                    </div> -->
                     <!-- here -->
 
                 </div>

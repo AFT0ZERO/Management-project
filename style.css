@@ -10,8 +10,6 @@ body {
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     scroll-behavior: smooth;
 }
 
@@ -30,12 +28,9 @@ header {
 header>p {
     font-size: 36px;
     font-weight: 700;
-    /* margin-left: 50px; */
     color: #4A55A2;
   
 }
-
-
 
   nav ul{
     width: 100%;
@@ -150,9 +145,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* max-width: 75%; */
     padding: 20px;
-    /* margin: 10px; */
 }
 
 .post1 {
@@ -175,7 +168,6 @@ main {
     color: #4A55A2;
     font-size: 45px;
     font-weight: 700;
-    /* border-bottom: 2px solid #4A55A2 ; */
 }
 
 
@@ -256,7 +248,6 @@ main {
 .card {
     width: 18rem;
     background-color: #A0BFE0;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 1); */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     max-width: 400px;
     margin: 20px;
@@ -282,60 +273,7 @@ main {
 }
 
 /* Responsive styles */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        padding: 1em 0;
-        border-top: 1px solid #eaeaea;
-    }
-
-    nav ul li a {
-        width: 100%;
-        display: block;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px;
-        background-color: #4A55A2;
-        transition: 0.3s;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
+@media (max-width: 815px) {
     .intro {
         grid-template-columns: 1fr ;
     }
@@ -347,7 +285,7 @@ main {
     .intro>.illustration {
         order: 1;
     }
-}
+} 
 /* footer abdallah start */
 footer {
     background-color: #28327e;

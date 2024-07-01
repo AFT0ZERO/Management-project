@@ -34,6 +34,30 @@ async function displayWelcomeMessage(userName) {
 displayWelcomeMessage()
 
 
+
+// show and hide login mohammed
+async function show(){
+    try{
+        const response = await fetch('http://localhost:3000/users');
+        const data = await response.json();
+        data.forEach(users =>{
+            if(users.active===true){
+                console.log("true")
+                document.getElementById("show-login").style.display="none"
+
+            }
+
+        })
+    }
+    catch {
+        console.log(`User with name '${userName}' not found.`);
+    }
+}
+show()
+// end mohammed
+
+
+
 // display projcets and tasks 
 // async function getJson() {
 //     try {

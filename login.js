@@ -30,7 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let emailExists = data.some(element => element.email === emailInput);
             
             if (emailExists) {
-                alert("This email is already used");
+                // alert("This email is already used");
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
                 document.getElementById("email-input-sign-up").value=" "; // fix this use the emailInput
                
             } else {
@@ -39,8 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     "firstName": firstNameInput,
                     "lastName": lastNameInput,
                     "email": emailInput,
-                    "password": passwordInput,
-                    "projects": [{"tasks": []}]
+                    "password": passwordInput
                 };
                 fetch('http://localhost:3000/users/', {
                     method: 'POST',
