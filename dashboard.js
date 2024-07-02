@@ -18,23 +18,24 @@ document.getElementById('closeCreateTaskPopup').addEventListener('click', functi
 
 
 
-// make this work with the html 
+// make this work with the html (fix this )
 
 //zaid search
-// document.getElementById('searchInput').addEventListener('keyup', function (event) {
-//     if (event.key === 'Enter') {
-//         let input = event.target.value.toLowerCase();
-//         let cards = document.querySelectorAll('.card');
-//         cards.forEach(card => {
-//             let cardName = card.getAttribute('data-name').toLowerCase();
-//             card.style.display = 'none'; 
-//             if (cardName.includes(input)) {
-//                 card.style.display = 'block'; 
-//             }
-//         });
-//     }
-// });
+document.getElementById('searchInput').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        let input = event.target.value.toLowerCase();
+        let cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            let cardName = card.getAttribute('data-name').toLowerCase();
+            card.style.display = 'none'; 
+            if (cardName.includes(input)) {
+                card.style.display = 'block'; 
+            }
+        });
+    }
+});
 // zaid search 2 
+
 // document.getElementById('searchAsid').addEventListener('keyup', function (event) {
 //     if (event.key === 'Enter') {
 //         let input = event.target.value.toLowerCase();
@@ -47,7 +48,7 @@ document.getElementById('closeCreateTaskPopup').addEventListener('click', functi
 //             } else {
 //                 item.style.display = 'none';
 //             }
-//         });
+//         });  
 //     }
 // });
 
@@ -57,7 +58,9 @@ document.getElementById('closeCreateTaskPopup').addEventListener('click', functi
 
 
 // zaid card 
-document.addEventListener("click", () => {
+
+// onclick the project name  (fix this)
+document.addEventListener("DOMContentLoaded", () => {
     const selectElements = document.querySelectorAll("select");
 
     selectElements.forEach((selectElement) => {
@@ -99,7 +102,9 @@ async function getJson() {
                     `;
                    
                     projectLink.addEventListener('click', () => displayProjectDetails(project));
+
                     projectdelBtn.addEventListener('click', () => deleteProject3(project));
+
                     projectItem.appendChild(projectLink);
                     projectItem.appendChild(projectdelBtn);
 
@@ -136,7 +141,7 @@ async function displayProjectDetails(project) {
         const taskContainer = document.createElement('div');
         taskContainer.className = "user-tasks";
         taskContainer.innerHTML = `
-            <div class="card">
+            <div class="card" data-name="${task.title}">
                         <div class="card-header">
                             <h2 class="taitle">${task.title}</h2>
                             <h2 class="history">${task.dueDate}</h2>
@@ -232,34 +237,34 @@ submitProject.addEventListener("submit", async (e) => {
 
 
 //delete project start abdallah
-let deleteProject = document.getElementById("delete-btn");
-console.log( document.getElementById("delete-btn"))
-deleteProject.addEventListener("click", async (e) => {
-    e.preventDefault();
+// let deleteProject = document.getElementById("delete-btn");
+// console.log( document.getElementById("delete-btn"))
+// deleteProject.addEventListener("click", async (e) => {
+//     e.preventDefault();
     
-    const response = await fetch('http://localhost:3000/users');
-    const users = await response.json();
-    users.forEach( async (user)=>{
-        if(user.active)
-            {   
-                const response2 = await fetch(`http://localhost:3000/projects?user_id=${user.id}`);
-                const projcets = await response2.json();
-               projcets.forEach(projcet =>{
+//     const response = await fetch('http://localhost:3000/users');
+//     const users = await response.json();
+//     users.forEach( async (user)=>{
+//         if(user.active)
+//             {   
+//                 const response2 = await fetch(`http://localhost:3000/projects?user_id=${user.id}`);
+//                 const projcets = await response2.json();
+//                projcets.forEach(projcet =>{
                     
-               });
+//                });
 
-                // await fetch(`http://localhost:3000/projects/${}`, {
-                //     method: 'DELETE',
-                //     headers: {
-                //         'Content-Type': 'application/json'
-                //     }
-                // })
-                //     .catch((error) => {
-                //         console.error('Error:', error);
-                //         alert("An error occurred");
-                //     });
-            }
-    })
+//                 // await fetch(`http://localhost:3000/projects/${}`, {
+//                 //     method: 'DELETE',
+//                 //     headers: {
+//                 //         'Content-Type': 'application/json'
+//                 //     }
+//                 // })
+//                 //     .catch((error) => {
+//                 //         console.error('Error:', error);
+//                 //         alert("An error occurred");
+//                 //     });
+//             }
+//     })
     // const response6 = await fetch(`http://localhost:3000/projects?id=${user.id}&&title=${deleteProjectTitle.value}`);
     // const projects = await response6.json();
     //  await fetch(`http://localhost:3000/projects/?title=${deleteProjectTitle.value}`, {
@@ -274,7 +279,7 @@ deleteProject.addEventListener("click", async (e) => {
     //         alert("An error occurred");
     //     });
 
-})
+// })
 
 
 

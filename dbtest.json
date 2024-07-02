@@ -2,11 +2,11 @@
   "users": [
     {
       "id": "1",
-      "active": true,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com",
-      "password": "password123"
+      "active": false,
+      "firstName": "abdallah",
+      "lastName": "tamimi",
+      "email": "abood@gmail.com",
+      "password": "1234"
     },
     {
       "id": "2",
@@ -23,6 +23,22 @@
       "lastName": "2",
       "email": "2@2",
       "password": "1234"
+    },
+    {
+      "id": "8d0e",
+      "active": false,
+      "firstName": "ad",
+      "lastName": "asd",
+      "email": "kgsac@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "c643",
+      "active": false,
+      "firstName": "abdallah",
+      "lastName": "tamimi",
+      "email": "aboody@gmail.com",
+      "password": "1234"
     }
   ],
   "projects": [
@@ -30,22 +46,22 @@
       "id": "8ce3",
       "user_id": "1",
       "active_pro": false,
-      "title": "Project Beta",
+      "title": "Project 1",
       "description": "This is the second project."
     },
     {
-      "id": "eb59",
+      "id": "db9a",
       "user_id": "1",
       "active_pro": false,
-      "title": "22",
-      "description": "22"
+      "title": "Project 2 ",
+      "description": "test"
     },
     {
-      "id": "a101",
+      "id": "f711",
       "user_id": "1",
       "active_pro": false,
-      "title": "12",
-      "description": "12"
+      "title": "Project 3",
+      "description": ""
     }
   ],
   "tasks": [
@@ -59,7 +75,16 @@
       "id": "c9d2"
     },
     {
-      "pro_id": "47d5",
+      "pro_id": "8ce3",
+      "active_task": false,
+      "title": "Task 3",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "db9a",
       "active_task": false,
       "title": "Task 2",
       "description": "Task 2 description",
@@ -69,6 +94,60 @@
     },
     {
       "pro_id": "8ce3",
+      "active_task": false,
+      "title": "Task 2",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "db9a",
+      "active_task": false,
+      "title": "Task 1",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "f711",
+      "active_task": false,
+      "title": "Task 2",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "eb59",
+      "active_task": false,
+      "title": "Task 3",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "fc58",
+      "active_task": false,
+      "title": "Task 1",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "fc58",
+      "active_task": false,
+      "title": "Task 2",
+      "description": "Task 2 description",
+      "dueDate": "2024-08-15",
+      "status": "completed",
+      "id": "a116"
+    },
+    {
+      "pro_id": "fc58",
       "active_task": false,
       "title": "Task 3",
       "description": "Task 3 description",

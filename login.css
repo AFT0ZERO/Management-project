@@ -11,7 +11,18 @@ body {
     height: 100vh;
     margin: -20px 0 50px;
 }
-
+.sign-in-btn{
+font-size: 18px;
+font-weight: 600;
+color: white;
+background-color: #808ce5;
+}
+.sign-up-btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #808ce5;  
+}
 h1 {
     font-weight: bold;
     margin: 0;
