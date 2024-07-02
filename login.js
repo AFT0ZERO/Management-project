@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (emailExists) {
                 // alert("This email is already used");
                 Swal.fire({
-                    title: "Good job!",
-                    text: "You clicked the button!",
-                    icon: "success"
+                    icon: "error",
+                    title: "Oops...",
+                    text: "This Email is already used!",
                   });
                 document.getElementById("email-input-sign-up").value=" "; // fix this use the emailInput
                
@@ -55,9 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(response => {
                     if (response.ok) {
-                        alert("User added successfully");
+                       // alert("User added successfully");
+                       Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "User Added Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
                     } else {
-                        alert("Failed to add user");
+                       // alert("Failed to add user");
+                       Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Failed to add user",
+                      });
                     }
                 })
                 .catch((error) => {
@@ -114,7 +126,13 @@ signUpUser.addEventListener("submit", async (e) => {
             }
         }
         if (!userFound) {
-            alert("Invalid email or password!")
+          //  alert("Invalid email or password!")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid Email or Password!",
+                
+              });
             // errorMessage.innerHTML = `<p>Invalid email or password!</p>`; //try to fix this 
             emailInput.value=""
             passwordInput.value=""

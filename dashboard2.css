@@ -94,6 +94,42 @@
     border-radius: 10px;
 }
 
+
+/* footer ahmad start */
+footer {
+    background-color: #28327e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    /* width: 100%; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.footer-nav li {
+    display: inline;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* footer ahmad end */
+
 @media (max-width: 768px) {
     .card {
         max-width: 90%;
