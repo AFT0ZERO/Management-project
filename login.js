@@ -11,6 +11,18 @@ signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
 
+
+// const firstName = document.getElementById('firstName').value.trim();
+// const lastName = document.getElementById('lastName').value.trim();
+// const email = document.getElementById('email').value.trim();
+// const password = document.getElementById('password').value.trim(); 
+const nameRegex = /^[a-zA-Z]+(?:[' -][a-zA-Z]+)*$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+
+
+
 // sign up 
 document.addEventListener('DOMContentLoaded', () => {
     let AddUser = document.getElementById("sign-up-form");
@@ -18,10 +30,58 @@ document.addEventListener('DOMContentLoaded', () => {
     AddUser.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let emailInput = document.getElementById("email-input-sign-up").value;
-        let firstNameInput = document.getElementById("firstName-input-sign-up").value;
-        let lastNameInput = document.getElementById("lastName-input-sign-up").value;
-        let passwordInput = document.getElementById("password-input-sign-up").value;
+        let firstNameInput = document.getElementById("firstName-input-sign-up").value.trim();
+        let lastNameInput = document.getElementById("lastName-input-sign-up").value.trim();
+        let emailInput = document.getElementById("email-input-sign-up").value.trim();
+        let passwordInput = document.getElementById("password-input-sign-up").value.trim();
+        
+        // Validate inputs
+         if (!nameRegex.test(firstNameInput)) {
+            // alert("Invalid first name.");
+            document.getElementById("firstName-input-sign-up").value="";
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid first name.",
+              });
+            return;
+        }
+
+        if (!nameRegex.test(lastNameInput)) {
+           // alert("Invalid last name."); 
+           document.getElementById("lastName-input-sign-up").value="";
+           Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Invalid last name.",
+          });
+            return;
+        }
+
+        if (!emailRegex.test(emailInput)) {
+            // alert("Invalid email address.");
+            document.getElementById("email-input-sign-up").value="";
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Invalid email address.",
+              });
+           
+            return;
+        }
+
+        if (!passwordRegex.test(passwordInput)) {
+            // alert("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
+            document.getElementById("password-input-sign-up").value="";
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.",
+              });
+             
+            return;
+        }
+
 
         // check email
         let CheckEmail = async function() {
@@ -57,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (response.ok) {
                        // alert("User added successfully");
                        Swal.fire({
-                        position: "top-end",
+                        position: "center-center",
                         icon: "success",
                         title: "User Added Successfully",
                         showConfirmButton: false,
@@ -93,6 +153,30 @@ signUpUser.addEventListener("submit", async (e) => {
     let emailInput = document.getElementById("email-sign-in-input");
     let passwordInput = document.getElementById("password-input-sign-in");
     let errorMessage = document.getElementById("erorr-message");
+
+    // if (!emailRegex.test(emailInput)) {
+    //     // alert("Invalid email address.");
+    //     document.getElementById("email-input-sign-up").value="";
+    //     Swal.fire({
+    //         icon: "error",
+    //         title: "Oops...",
+    //         text: "email address is incomplete .",
+    //       });
+       
+    //     return;
+    // }
+
+    // if (!passwordRegex.test(passwordInput)) {
+    //     // alert("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
+    //     document.getElementById("password-input-sign-up").value="";
+    //     Swal.fire({
+    //         icon: "error",
+    //         title: "Oops...",
+    //         text: "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.",
+    //       });
+         
+    //     return;
+    // }
 
     try {
         const response = await fetch(`http://localhost:3000/users/`);
@@ -131,14 +215,23 @@ signUpUser.addEventListener("submit", async (e) => {
                 icon: "error",
                 title: "Oops...",
                 text: "Invalid Email or Password!",
-                
               });
             // errorMessage.innerHTML = `<p>Invalid email or password!</p>`; //try to fix this 
             emailInput.value=""
             passwordInput.value=""
         } else {
-            window.location.href = "index.html";
-        }
+            // document.getElementById("signIn").addEventListener("click", () => {
+                function click() {
+                    window.location.href = "dashboard.html";
+                }
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
+                setTimeout(click, 2000)
+            }
+        // }
 
     } catch (error) {
         console.error('Error:', error);
